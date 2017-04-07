@@ -4,13 +4,14 @@ package products;
 import operations.History;
 import operations.InterestMechanism;
 import operations.OperationBuilder;
+import operations.interests.Interest;
 
 
 public abstract class Account {
     private History history = new History();
-    private InterestMechanism interestMechanism;
     private int balance;
     int id;
+    protected Interest interestMechanism;
 
     public int getBalance() {
         return balance;
@@ -20,7 +21,7 @@ public abstract class Account {
         this.balance = balance;
     }
 
-    public void setInterestMechanism(InterestMechanism interestMechanism) {
+    public void setInterestMechanism(Interest interestMechanism) {
         this.interestMechanism = interestMechanism;
     }
 

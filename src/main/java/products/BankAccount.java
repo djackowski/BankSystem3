@@ -1,26 +1,25 @@
 package products;
 
 
-import operations.InterestOperation;
 import operations.OverdraftOperation;
 import operations.bank.BankOperationBuilder;
 import operations.bank.BankOperationFactory;
+import operations.interests.LinearInterest;
 
 import java.util.Calendar;
 import java.util.Date;
-
-import static operations.InterestMechanism.ACCOUNT;
 
 public class BankAccount extends Account {
 
     private int balance;
     private Calendar createdDate;
-    private InterestOperation interestOperation = new InterestOperation(this);
+    //private InterestOperation interestOperation = new InterestOperation(this);
     private OverdraftOperation overdraftOperation = new OverdraftOperation(this);
 
     public BankAccount(int id) {
         this.id = id;
         createdDate = Calendar.getInstance();
+        interestMechanism = new LinearInterest();
     }
 
 
@@ -33,8 +32,7 @@ public class BankAccount extends Account {
     }
 
     public double calculateInterest() {
-        interestOperation.setInterestMechanism(ACCOUNT);
-        return interestOperation.calculate(balance);
+        return interestMechanism.calculate(balance);
     }
 
     @Override

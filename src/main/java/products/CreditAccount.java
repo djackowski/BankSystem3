@@ -10,7 +10,6 @@ public class CreditAccount extends Account {
         creditOperationBuilder = new CreditOperationBuilder(this);
     }
 
-
     @Override
     public CreditOperationBuilder getOperation() {
         return creditOperationBuilder;
