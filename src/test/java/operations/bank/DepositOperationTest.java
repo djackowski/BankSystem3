@@ -1,5 +1,6 @@
 package operations.bank;
 
+import commands.DepositCommand;
 import org.junit.Test;
 import products.BankAccount;
 
@@ -12,10 +13,10 @@ public class DepositOperationTest {
         //Given
         BankAccount bankAccount = new BankAccount(1023);
         bankAccount.setBalance(100);
-        DepositOperation depositOperation = new DepositOperation(bankAccount);
+        DepositCommand depositOperation = new DepositCommand(bankAccount, 10);
 
         //When
-        depositOperation.deposit(10);
+        bankAccount.executeCommand(depositOperation);
 
         //Then
         assertEquals(110, bankAccount.getBalance());

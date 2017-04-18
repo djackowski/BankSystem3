@@ -1,5 +1,6 @@
 package operations.bank;
 
+import commands.TransferCommand;
 import org.junit.Test;
 import products.BankAccount;
 
@@ -11,9 +12,9 @@ public class TransferOperationTest {
         //Given
         BankAccount firstBankAccount = new BankAccount(10);
         BankAccount secondBankAccount = new BankAccount(11);
-        TransferOperation transferOperation = new TransferOperation(firstBankAccount);
+        TransferCommand transferCommand = new TransferCommand(firstBankAccount, secondBankAccount, 100);
         //When
-        transferOperation.transfer(100, secondBankAccount);
+        firstBankAccount.executeCommand(transferCommand);
         //Then
         assertEquals(0, secondBankAccount.getBalance());
     }
@@ -24,9 +25,9 @@ public class TransferOperationTest {
         BankAccount firstBankAccount = new BankAccount(10);
         firstBankAccount.setBalance(100);
         BankAccount secondBankAccount = new BankAccount(11);
-        TransferOperation transferOperation = new TransferOperation(firstBankAccount);
+        TransferCommand transferCommand = new TransferCommand(firstBankAccount, secondBankAccount, 100);
         //When
-        transferOperation.transfer(100, secondBankAccount);
+        firstBankAccount.executeCommand(transferCommand);
         //Then
         assertEquals(100, secondBankAccount.getBalance());
     }
@@ -37,9 +38,9 @@ public class TransferOperationTest {
         BankAccount firstBankAccount = new BankAccount(10);
         firstBankAccount.setBalance(100);
         BankAccount secondBankAccount = new BankAccount(11);
-        TransferOperation transferOperation = new TransferOperation(firstBankAccount);
+        TransferCommand transferCommand = new TransferCommand(firstBankAccount, secondBankAccount, 100);
         //When
-        transferOperation.transfer(100, secondBankAccount);
+        firstBankAccount.executeCommand(transferCommand);
         //Then
         assertEquals(0, firstBankAccount.getBalance());
     }

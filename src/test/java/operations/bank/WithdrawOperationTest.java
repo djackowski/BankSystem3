@@ -1,5 +1,6 @@
 package operations.bank;
 
+import commands.WithdrawCommand;
 import org.junit.Test;
 import products.BankAccount;
 
@@ -10,10 +11,10 @@ public class WithdrawOperationTest {
     public void whenWithdraw_with20AmountAndNoInitialBalance_shouldReturn0() throws Exception {
         //Given
         BankAccount bankAccount = new BankAccount(10);
-        WithdrawOperation withdrawOperation = new WithdrawOperation(bankAccount);
+        WithdrawCommand withdrawCommand = new WithdrawCommand(bankAccount, 20);
 
         //When
-        withdrawOperation.withdraw(20);
+        bankAccount.executeCommand(withdrawCommand);
         //Then
         assertEquals(0, bankAccount.getBalance());
     }
@@ -23,10 +24,10 @@ public class WithdrawOperationTest {
         //Given
         BankAccount bankAccount = new BankAccount(10);
         bankAccount.setBalance(100);
-        WithdrawOperation withdrawOperation = new WithdrawOperation(bankAccount);
+        WithdrawCommand withdrawCommand = new WithdrawCommand(bankAccount, 20);
 
         //When
-        withdrawOperation.withdraw(20);
+        bankAccount.executeCommand(withdrawCommand);
         //Then
         assertEquals(80, bankAccount.getBalance());
     }

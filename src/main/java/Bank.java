@@ -1,12 +1,12 @@
-import operations.History;
+import commands.TransferCommand;
+import commands.WithdrawCommand;
 import products.BankAccount;
-import products.CreditAccount;
-import products.InvestmentAccount;
+import commands.DepositCommand;
 
 public class Bank {
 
     public static void main(String[] args) {
-        //Bank account
+   /*     //Bank account
         BankAccount firstAccount = new BankAccount(1203);
         BankAccount secondAccount = new BankAccount(1204);
         firstAccount.getOperation()
@@ -23,11 +23,11 @@ public class Bank {
         System.out.println("First balance = " + firstAccountBalance + " Second balance = " + secondAccountBalance);
         System.out.println("Date: " + firstAccount.getCreatedDate());
 
-        History firstAccountHistory = firstAccount.getHistory();
-        History secondAccountHistory = secondAccount.getHistory();
-        System.out.println("First Account operations.History: " + firstAccountHistory.getOperationList());
-        System.out.println("Second Account operations.History: " + secondAccountHistory.getOperationList());
-        System.out.println("Bank operations.History: " + History.getHistory().getOperationList());
+        History2 firstAccountHistory = firstAccount.getHistory2();
+        History2 secondAccountHistory = secondAccount.getHistory2();
+        System.out.println("First Account operations.History2: " + firstAccountHistory.getOperationList());
+        System.out.println("Second Account operations.History2: " + secondAccountHistory.getOperationList());
+        System.out.println("Bank operations.History2: " + History2.getHistory2().getOperationList());
         //InvestmentAccount
 
         BankAccount thirdAccount = new BankAccount(234);
@@ -39,7 +39,7 @@ public class Bank {
 
         firstInvest.getOperation().cancel(thirdAccount);
 
-        System.out.println("InvestmentAccount history: " + firstInvest.getHistory().getOperationList());
+        System.out.println("InvestmentAccount history: " + firstInvest.getHistory2().getOperationList());
 
 
         //CreditAccount
@@ -52,8 +52,8 @@ public class Bank {
         creditAccount.getOperation().payFirst(creditBankAccount);
         creditAccount.getOperation().payFirst(creditBankAccount);
 
-        System.out.println("CreditAccount history: " + creditAccount.getHistory().getOperationList());
-        System.out.println("Bank history: " + History.getHistory().getOperationList());
+        System.out.println("CreditAccount history: " + creditAccount.getHistory2().getOperationList());
+        System.out.println("Bank history: " + History2.getHistory2().getOperationList());
 
         //Overdraft
         BankAccount bank = new BankAccount(2313124);
@@ -61,6 +61,13 @@ public class Bank {
         bank.setOverdraftMechanism(200);
         bank.getOperation().withdraw(100);
         bank.getBalance();
-        bank.getOperation().deposit(200);
+        bank.getOperation().deposit(200);*/
+
+        BankAccount bankAccount = new BankAccount(2);
+        BankAccount bankAccount2 = new BankAccount(3);
+        bankAccount.executeCommand(new DepositCommand(bankAccount, 100));
+        bankAccount.executeCommand(new WithdrawCommand(bankAccount, 100));
+        bankAccount.executeCommand(new DepositCommand(bankAccount, 200));
+        bankAccount.executeCommand(new TransferCommand(bankAccount, bankAccount2, 20));
     }
 }

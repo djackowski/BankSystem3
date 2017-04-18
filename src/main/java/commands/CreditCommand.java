@@ -1,38 +1,32 @@
-package operations.credit;
+package commands;
 
-
-import operations.History;
-import operations.InterestOperation;
-import operations.Operation;
-import products.Account;
 import products.BankAccount;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static operations.InterestMechanism.CREDIT;
-
-public class CreditOperation extends Operation {
+public class CreditCommand implements Command {
+    private final BankAccount bankAccount;
+    private final int amount;
     private List<Credit> creditList = new ArrayList<Credit>();
 
-    protected CreditOperation(Account account) {
-        super(account);
+    public CreditCommand(BankAccount bankAccount, int amount) {
+        this.bankAccount = bankAccount;
+        this.amount = amount;
     }
 
-
-    public void take(BankAccount bankAccount, int amount) {
+    public boolean execute() {
         int resultBalance = bankAccount.getBalance() + amount;
         bankAccount.setBalance(resultBalance);
         Credit currentCredit = new Credit(amount);
         creditList.add(currentCredit);
         System.out.println("You have taken the credit: " + amount);
-        String description = "Credit operation taken: " + amount;
-        getHistory().add(description);
-        History.getHistory().add(description);
+        return true;
     }
 
-    public void payFirst(BankAccount bankAccount) {
-        if (creditList.isEmpty()) {
+
+    public void payFirst() {
+  /*      if (creditList.isEmpty()) {
             System.out.println("You have no credits to pay");
             return;
         }
@@ -50,9 +44,9 @@ public class CreditOperation extends Operation {
         bankAccount.setBalance((int) resultBalance);
         System.out.println("You have paid credit: " + creditWithInterest + " Your account balance: " + bankAccount.getBalance());
         String description = "Credit operation payed: " + creditWithInterest;
-        getHistory().add(description);
-        History.getHistory().add(description);
-        creditList.remove(0);
+        getHistory2().add(description);
+        History2.getHistory2().add(description);
+        creditList.remove(0);*/
 
     }
 

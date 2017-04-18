@@ -1,19 +1,9 @@
 package operations.investment;
 
 
-import operations.History;
-import operations.InterestMechanism;
-import operations.InterestOperation;
-import operations.Operation;
-import products.Account;
-import products.BankAccount;
-
-import java.util.Timer;
-import java.util.TimerTask;
-
-public class InvestmentOperation extends Operation {
+public class InvestmentOperation {
     private int amount;
-    private TimerTask task;
+  /*  private TimerTask task;
 
     protected InvestmentOperation(Account account) {
         super(account);
@@ -45,14 +35,14 @@ public class InvestmentOperation extends Operation {
             }
         };
         t.schedule(task, timeInMillis);
-        account.getHistory().add("Investment operation started: " + amount);
+        account.getHistory2().add("Investment operation started: " + amount);
     }
 
     private void saveInterest(BankAccount bankAccount, int balance) {
 
         bankAccount.setBalance(balance);
         System.out.println("Interest saved. Current balance = " + bankAccount.getBalance());
-        account.getHistory().add("Investment operation saved: " + amount);
+        account.getHistory2().add("Investment operation saved: " + amount);
 
     }
 
@@ -66,10 +56,10 @@ public class InvestmentOperation extends Operation {
         bankAccount.setBalance(resultBalance);
         System.out.println("Investment cancelled. Money has been restored.");
         String description = "Investment operation cancelled. Restored money: " + resultBalance;
-        account.getHistory().add(description);
-        History.getHistory().add(description);
+        account.getHistory2().add(description);
+        History2.getHistory2().add(description);
 
 
-    }
+    }*/
 
 }

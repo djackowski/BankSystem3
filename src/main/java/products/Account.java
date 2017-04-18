@@ -1,10 +1,10 @@
 package products;
 
 
-import operations.History;
-import operations.InterestMechanism;
-import operations.OperationBuilder;
+import commands.Command;
 import operations.interests.Interest;
+
+import java.util.List;
 
 
 public abstract class Account {
@@ -25,16 +25,21 @@ public abstract class Account {
         this.interestMechanism = interestMechanism;
     }
 
-    public History getHistory() {
-        return history;
+    public List<Command> getCommandHistory() {
+        return history.getCommandList();
+    }
+
+    public void executeCommand(Command command) {
+        boolean execute = command.execute();
+        if (execute) {
+            getCommandHistory().add(command);
+        }
     }
 
     @Override
     public String toString() {
         return this.getClass().getName();
     }
-
-    public abstract OperationBuilder getOperation();
 
     public int getId() {
         return id;
