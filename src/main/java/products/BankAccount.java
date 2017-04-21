@@ -10,11 +10,12 @@ import java.util.Date;
 public class BankAccount extends Account {
     private int balance;
     private Calendar createdDate;
-    //private InterestOperation interestOperation = new InterestOperation(this);
+    private final BankMediator mediator;
     private OverdraftOperation overdraftOperation = new OverdraftOperation();
 
-    public BankAccount(int id) {
+    public BankAccount(int id, BankMediator mediator) {
         this.id = id;
+        this.mediator = mediator;
         createdDate = Calendar.getInstance();
         interestMechanism = new LinearInterest();
     }

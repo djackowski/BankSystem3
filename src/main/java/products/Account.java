@@ -30,8 +30,8 @@ public abstract class Account {
     }
 
     public void executeCommand(Command command) {
-        boolean execute = command.execute();
-        if (execute) {
+        boolean isExecuted = command.execute();
+        if (isExecuted) {
             getCommandHistory().add(command);
         }
     }

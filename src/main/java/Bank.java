@@ -2,6 +2,7 @@ import commands.TransferCommand;
 import commands.WithdrawCommand;
 import products.BankAccount;
 import commands.DepositCommand;
+import products.BankMediator;
 
 public class Bank {
 
@@ -63,11 +64,21 @@ public class Bank {
         bank.getBalance();
         bank.getOperation().deposit(200);*/
 
-        BankAccount bankAccount = new BankAccount(2);
+       /* BankAccount bankAccount = new BankAccount(2);
         BankAccount bankAccount2 = new BankAccount(3);
         bankAccount.executeCommand(new DepositCommand(bankAccount, 100));
         bankAccount.executeCommand(new WithdrawCommand(bankAccount, 100));
         bankAccount.executeCommand(new DepositCommand(bankAccount, 200));
-        bankAccount.executeCommand(new TransferCommand(bankAccount, bankAccount2, 20));
+        bankAccount.executeCommand(new TransferCommand(bankAccount, bankAccount2, 20));*/
+
+        BankMediator bankMediator = new BankMediator();
+        BankAccount first = new BankAccount(1, bankMediator);
+        BankAccount second = new BankAccount(2, bankMediator);
+        bankMediator.addAccount(first);
+        bankMediator.addAccount(second);
+        first.executeCommand(new DepositCommand(first, 100));
+        first.executeCommand(new WithdrawCommand(first, 110));
+        second.executeCommand(new DepositCommand(second, 20));
+
     }
 }
