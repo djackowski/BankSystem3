@@ -1,12 +1,13 @@
 package commands;
 
+import products.Account;
 import products.BankAccount;
 
 public class DepositCommand implements Command {
-    private final BankAccount bankAccount;
+    private final Account bankAccount;
     private final int amount;
 
-    public DepositCommand(BankAccount bankAccount, int amount) {
+    public DepositCommand(Account bankAccount, int amount) {
         this.bankAccount = bankAccount;
         this.amount = amount;
     }
