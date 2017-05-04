@@ -4,95 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/commands/Command.java" line="3" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad2c8285-eacf-4898-a1c7-4917ff2a7501" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commands/Command.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commands/CreditCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commands/DepositCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commands/TransferCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/commands/WithdrawCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/products/History.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/AccountOperations.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/History.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/InterestMechanism.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/InterestOperation$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/InterestOperation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/Operation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/OperationBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/OperationFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/bank/BankOperationBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/bank/BankOperationFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/bank/DepositOperation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/bank/DepositOperationFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/bank/TransferOperation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/bank/TransferOperationFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/bank/WithdrawOperation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/bank/WithdrawOperationFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/credit/CreditOperation$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/credit/CreditOperation$Credit.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/credit/CreditOperation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/credit/CreditOperationBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/credit/CreditOperationFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/investment/InvestmentAccountOperationBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/investment/InvestmentAccountOperationFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/investment/InvestmentOperation$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/operations/investment/InvestmentOperationFactory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/AccountOperations.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/History.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/InterestMechanism.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/InterestOperation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/Operation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/OperationBuilder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/OperationFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/bank/BankOperationBuilder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/bank/BankOperationFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/bank/DepositOperation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/bank/DepositOperationFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/bank/TransferOperation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/bank/TransferOperationFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/bank/WithdrawOperation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/bank/WithdrawOperationFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/credit/CreditOperation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/credit/CreditOperationBuilder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/credit/CreditOperationFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/investment/InvestmentAccountOperationBuilder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/investment/InvestmentAccountOperationFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/operations/investment/InvestmentOperationFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/OperationFactory2Test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/OperationFactoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/tests/OperationTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/Bank.class" afterPath="$PROJECT_DIR$/build/classes/main/Bank.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/operations/OverdraftOperation.class" afterPath="$PROJECT_DIR$/build/classes/main/operations/OverdraftOperation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/operations/investment/InvestmentOperation.class" afterPath="$PROJECT_DIR$/build/classes/main/operations/investment/InvestmentOperation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/products/Account.class" afterPath="$PROJECT_DIR$/build/classes/main/products/Account.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/products/BankAccount.class" afterPath="$PROJECT_DIR$/build/classes/main/products/BankAccount.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/products/CreditAccount.class" afterPath="$PROJECT_DIR$/build/classes/main/products/CreditAccount.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/products/InvestmentAccount.class" afterPath="$PROJECT_DIR$/build/classes/main/products/InvestmentAccount.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/operations/bank/DepositOperationTest.class" afterPath="$PROJECT_DIR$/build/classes/test/operations/bank/DepositOperationTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/operations/bank/TransferOperationTest.class" afterPath="$PROJECT_DIR$/build/classes/test/operations/bank/TransferOperationTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/operations/bank/WithdrawOperationTest.class" afterPath="$PROJECT_DIR$/build/classes/test/operations/bank/WithdrawOperationTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/operations/interests/LinearInterestTest.class" afterPath="$PROJECT_DIR$/build/classes/test/operations/interests/LinearInterestTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/BankSystem3.iml" afterPath="$PROJECT_DIR$/.idea/modules/BankSystem3.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/BankSystem3_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/BankSystem3_main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/BankSystem3_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/BankSystem3_test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Bank.java" afterPath="$PROJECT_DIR$/src/main/java/Bank.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/operations/OverdraftOperation.java" afterPath="$PROJECT_DIR$/src/main/java/operations/OverdraftOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/operations/interests/Interest.java" afterPath="$PROJECT_DIR$/src/main/java/operations/interests/Interest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/operations/investment/InvestmentOperation.java" afterPath="$PROJECT_DIR$/src/main/java/operations/investment/InvestmentOperation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/products/Account.java" afterPath="$PROJECT_DIR$/src/main/java/products/Account.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/products/BankAccount.java" afterPath="$PROJECT_DIR$/src/main/java/products/BankAccount.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/products/CreditAccount.java" afterPath="$PROJECT_DIR$/src/main/java/products/CreditAccount.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/products/InvestmentAccount.java" afterPath="$PROJECT_DIR$/src/main/java/products/InvestmentAccount.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/operations/bank/DepositOperationTest.java" afterPath="$PROJECT_DIR$/src/test/java/operations/bank/DepositOperationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/operations/bank/TransferOperationTest.java" afterPath="$PROJECT_DIR$/src/test/java/operations/bank/TransferOperationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/operations/bank/WithdrawOperationTest.java" afterPath="$PROJECT_DIR$/src/test/java/operations/bank/WithdrawOperationTest.java" />
-    </list>
+    <list default="true" id="ad2c8285-eacf-4898-a1c7-4917ff2a7501" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -1274,7 +1186,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07089947" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07089947" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
