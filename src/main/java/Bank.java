@@ -1,7 +1,10 @@
 import commands.TransferCommand;
 import commands.WithdrawCommand;
+import products.Account;
 import products.BankAccount;
 import commands.DepositCommand;
+import products.BankMediator;
+import products.OverdraftAccount;
 
 public class Bank {
 
@@ -63,11 +66,30 @@ public class Bank {
         bank.getBalance();
         bank.getOperation().deposit(200);*/
 
-        BankAccount bankAccount = new BankAccount(2);
+        //Command
+       /* BankAccount bankAccount = new BankAccount(2);
         BankAccount bankAccount2 = new BankAccount(3);
         bankAccount.executeCommand(new DepositCommand(bankAccount, 100));
         bankAccount.executeCommand(new WithdrawCommand(bankAccount, 100));
         bankAccount.executeCommand(new DepositCommand(bankAccount, 200));
-        bankAccount.executeCommand(new TransferCommand(bankAccount, bankAccount2, 20));
+        bankAccount.executeCommand(new TransferCommand(bankAccount, bankAccount2, 20));*/
+
+
+        //Mediator
+      /*  BankMediator bankMediator = new BankMediator();
+        BankAccount first = new BankAccount(1);
+        BankAccount second = new BankAccount(2);
+        bankMediator.addAccount(first);
+        bankMediator.addAccount(second);
+        first.executeCommand(new DepositCommand(first, 100));
+        first.executeCommand(new WithdrawCommand(first, 110));
+        second.executeCommand(new DepositCommand(second, 20));*/
+
+      //Decorator
+        Account bankAccount = new BankAccount(1);
+        bankAccount.executeCommand(new DepositCommand(bankAccount, 100));
+        Account overdraftAccount = new OverdraftAccount(bankAccount);
+        overdraftAccount.executeCommand(new WithdrawCommand(overdraftAccount, 200));
+
     }
 }
