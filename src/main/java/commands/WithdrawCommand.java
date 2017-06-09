@@ -1,7 +1,6 @@
 package commands;
 
 import products.Account;
-import products.BankAccount;
 
 public class WithdrawCommand implements Command {
     private final Account bankAccount;
@@ -12,14 +11,12 @@ public class WithdrawCommand implements Command {
         this.amount = amount;
     }
 
-    public boolean execute() {
-        //TODO: overdraft should me improved
-      /*  if (bankAccount.getBalance() + bankAccount.getOverdraftMechanism() < amount) {
-            System.out.println("You have not enough money");
-            return false;
-        }*/
+    public boolean execute(Account account) {
         int balance = bankAccount.getBalance();
         int resultBalance = balance - amount;
+        if(resultBalance < 0) {
+            return false;
+        }
         bankAccount.setBalance(resultBalance);
         System.out.println("Money withdrawn: " + amount);
         return true;

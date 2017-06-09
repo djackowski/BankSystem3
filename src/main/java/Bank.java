@@ -1,10 +1,6 @@
 import commands.TransferCommand;
-import commands.WithdrawCommand;
-import products.Account;
 import products.BankAccount;
-import commands.DepositCommand;
 import products.BankMediator;
-import products.OverdraftAccount;
 
 public class Bank {
 
@@ -76,20 +72,22 @@ public class Bank {
 
 
         //Mediator
-      /*  BankMediator bankMediator = new BankMediator();
-        BankAccount first = new BankAccount(1);
-        BankAccount second = new BankAccount(2);
+        BankMediator bankMediator = new BankMediator();
+        BankAccount first = new BankAccount(bankMediator);
+        BankAccount second = new BankAccount(bankMediator);
         bankMediator.addAccount(first);
-        bankMediator.addAccount(second);
-        first.executeCommand(new DepositCommand(first, 100));
+
+        first.send(new TransferCommand(second, 100));
+
+       /* first.executeCommand(new DepositCommand(first, 100));
         first.executeCommand(new WithdrawCommand(first, 110));
         second.executeCommand(new DepositCommand(second, 20));*/
 
-      //Decorator
-        Account bankAccount = new BankAccount(1);
+        //Decorator
+        /*Account bankAccount = new BankAccount(1);
         bankAccount.executeCommand(new DepositCommand(bankAccount, 100));
         Account overdraftAccount = new OverdraftAccount(bankAccount);
-        overdraftAccount.executeCommand(new WithdrawCommand(overdraftAccount, 200));
+        overdraftAccount.executeCommand(new WithdrawCommand(overdraftAccount, 200));*/
 
     }
 }

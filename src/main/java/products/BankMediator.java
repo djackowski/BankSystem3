@@ -12,11 +12,10 @@ public class BankMediator implements Mediator {
         accountList.add(account);
     }
 
-    public void execute(Command command, Account account) {
+    @Override
+    public void notify(Command command) {
         for (Account acc : accountList) {
-            if (acc.equals(account)) {
-                account.executeCommand(command);
-            }
+            acc.executeCommand(command);
         }
     }
 }

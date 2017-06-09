@@ -2,21 +2,22 @@ package products;
 
 import commands.Command;
 
-//TODO: implements...
-public class OverdraftAccount extends Account {
-    private int overdraft;
-    private int maxOverdraft = 200;
+public class OverdraftAccount extends OverdraftAccountDecorator {
 
-    private final Account account;
 
-    public OverdraftAccount(Account account) {
-        this.account = account;
+    public OverdraftAccount(Account decoratedAccount) {
+        super(decoratedAccount);
     }
 
-    //FIXME:
     @Override
     public void executeCommand(Command command) {
-        account.executeCommand(command);
         super.executeCommand(command);
+        decoratedAccount.executeCommand(command);
+    }
+
+    @Override
+    public void send(Command command) {
+        super.send(command);
+        decoratedAccount.send(command);
     }
 }

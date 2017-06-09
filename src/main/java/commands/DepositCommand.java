@@ -1,22 +1,21 @@
 package commands;
 
 import products.Account;
-import products.BankAccount;
 
 public class DepositCommand implements Command {
-    private final Account bankAccount;
     private final int amount;
 
-    public DepositCommand(Account bankAccount, int amount) {
-        this.bankAccount = bankAccount;
+    public DepositCommand(int amount) {
         this.amount = amount;
     }
 
-    public boolean execute() {
-        int balance = bankAccount.getBalance();
+    @Override
+    public boolean execute(Account account) {
+        int balance = account.getBalance();
         int resultBalance = balance + amount;
-        bankAccount.setBalance(resultBalance);
+        account.setBalance(resultBalance);
         System.out.println("Money deposited: " + amount);
         return true;
     }
+
 }

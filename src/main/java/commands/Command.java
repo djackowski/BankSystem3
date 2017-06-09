@@ -1,6 +1,8 @@
 package commands;
 
-public interface Command {
-    boolean execute();
 
+import products.Account;
+
+public interface Command {
+    boolean execute(Account account);
 }

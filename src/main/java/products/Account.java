@@ -5,12 +5,13 @@ import commands.Command;
 import operations.interests.Interest;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 
 public abstract class Account {
     private History history = new History();
     private int balance;
-    int id;
+    static AtomicInteger id = new AtomicInteger();
     protected Interest interestMechanism;
 
     public int getBalance() {
@@ -29,11 +30,9 @@ public abstract class Account {
         return history.getCommandList();
     }
 
-    public void executeCommand(Command command) {
-        boolean isExecuted = command.execute();
-        if (isExecuted) {
-            getCommandHistory().add(command);
-        }
+
+    public static AtomicInteger getId() {
+        return id;
     }
 
     @Override
@@ -41,8 +40,16 @@ public abstract class Account {
         return this.getClass().getName();
     }
 
-    public int getId() {
-        return id;
+    public double calculateInterest(int amount) {
+        return interestMechanism.calculate(amount);
     }
+
+    public Interest getInterestMechanism() {
+        return interestMechanism;
+    }
+
+    public abstract void executeCommand(Command command);
+
+    public abstract void send(Command command);
 
 }
